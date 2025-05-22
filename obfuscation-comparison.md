@@ -1,23 +1,24 @@
 # So sánh các công cụ Obfuscation và bảo mật phần mềm
 
-Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các công cụ obfuscation, bảo vệ mã nguồn và chứng chỉ bảo mật được sử dụng phổ biến hiện nay.
+Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các công cụ obfuscation, bảo vệ mã nguồn, chứng chỉ bảo mật, cùng công cụ đóng gói native phổ biến hiện nay.
 
 ---
 
 ## Bảng so sánh nhanh
 
-| Nhà cung cấp            | Giấy phép    | Miễn phí | Tính năng nổi bật                           | Phù hợp cho                  |
-|------------------------|--------------|----------|--------------------------------------------|------------------------------|
-| [yGuard](#1-yguard)               | LGPL         | Yes      | Obfuscation cơ bản, tích hợp Ant            | Dự án mã nguồn mở            |
-| [ProGuard](#2-proguard)           | GPL v2       | Yes      | Obfuscation, tối ưu hóa, miễn phí            | Dự án mã nguồn mở, Android   |
-| [Facebook ProGuard](#3-facebook-proguard) | GPL v2       | Yes      | Tối ưu hóa cho Android                       | Ứng dụng Android             |
-| [DashO](#4-dasho)                 | Commercial   | No       | Obfuscation, bảo vệ chống tamper             | Ứng dụng thương mại lớn      |
-| [Allatori](#5-allatori)           | Commercial   | No       | Obfuscation, mã hóa chuỗi, watermarking      | Ứng dụng thương mại          |
-| [Stringer](#6-stringer)           | Commercial   | No       | Mã hóa chuỗi, obfuscation                     | Ứng dụng cần bảo vệ chuỗi    |
-| [Java Bytecode Obfuscator](#7-java-bytecode-obfuscator) | Commercial | No       | Obfuscation bytecode cấp thấp                 | Dự án cần bảo vệ bytecode    |
-| [KlassMaster (Zelix)](#8-klassmaster-zelix) | Commercial   | No       | Obfuscation nâng cao, flow control            | Ứng dụng thương mại lớn      |
-| [Protector4J](#9-protector4j)     | Commercial   | No       | Mã hóa AES, bảo vệ thương mại                 | Phần mềm độc quyền           |
-| [SSL.com](#10-sslcom)             | Commercial   | No       | Chứng chỉ EV/OV, tăng độ tin cậy               | Phân phối ứng dụng công khai |
+| Nhà cung cấp                 | Giấy phép    | Miễn phí | Tính năng nổi bật                                  | Phù hợp cho                     |
+|-----------------------------|--------------|----------|---------------------------------------------------|---------------------------------|
+| [yGuard](#1-yguard)                 | LGPL         | Yes      | Obfuscation cơ bản, tích hợp Ant                    | Dự án mã nguồn mở               |
+| [ProGuard](#2-proguard)             | GPL v2       | Yes      | Obfuscation, tối ưu hóa, miễn phí                    | Dự án mã nguồn mở, Android      |
+| [Facebook ProGuard](#3-facebook-proguard) | GPL v2       | Yes      | Tối ưu hóa cho Android                               | Ứng dụng Android                |
+| [DashO](#4-dasho)                   | Commercial   | No       | Obfuscation, bảo vệ chống tamper                     | Ứng dụng thương mại lớn         |
+| [Allatori](#5-allatori)             | Commercial   | No       | Obfuscation, mã hóa chuỗi, watermarking              | Ứng dụng thương mại             |
+| [Stringer](#6-stringer)             | Commercial   | No       | Mã hóa chuỗi, obfuscation                             | Ứng dụng cần bảo vệ chuỗi       |
+| [Java Bytecode Obfuscator](#7-java-bytecode-obfuscator) | Commercial | No       | Obfuscation bytecode cấp thấp                         | Dự án cần bảo vệ bytecode       |
+| [KlassMaster (Zelix)](#8-klassmaster-zelix)     | Commercial   | No       | Obfuscation nâng cao, flow control                    | Ứng dụng thương mại lớn         |
+| [Protector4J](#9-protector4j)       | Commercial   | No       | Mã hóa AES, bảo vệ thương mại                         | Phần mềm độc quyền              |
+| [SSL.com](#10-sslcom)               | Commercial   | No       | Chứng chỉ EV/OV, tăng độ tin cậy                      | Phân phối ứng dụng công khai    |
+| [Gradle Native VM](#11-gradle-native-vm)         | Open Source  | Yes      | Tạo native image, đóng gói ứng dụng Java vào file native | Ứng dụng desktop, server native |
 
 ---
 
@@ -29,13 +30,13 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Có
 - **Tính năng nổi bật:**  
   Obfuscation cơ bản, tích hợp tốt với Ant build tool.
-- **Ưu điểm:**  
-  - Miễn phí và mã nguồn mở  
-  - Dễ tích hợp vào quy trình build hiện tại với Ant  
-  - Đơn giản, phù hợp dự án nhỏ và vừa  
-- **Nhược điểm:**  
-  - Tính năng obfuscation khá cơ bản, không có bảo vệ nâng cao  
-  - Ít cập nhật và ít hỗ trợ cộng đồng  
+- **Ưu điểm:**
+    - Miễn phí và mã nguồn mở
+    - Dễ tích hợp vào quy trình build hiện tại với Ant
+    - Đơn giản, phù hợp dự án nhỏ và vừa
+- **Nhược điểm:**
+    - Tính năng obfuscation khá cơ bản, không có bảo vệ nâng cao
+    - Ít cập nhật và ít hỗ trợ cộng đồng
 - **Phù hợp cho:**  
   Dự án mã nguồn mở cần một công cụ miễn phí, nhẹ nhàng.
 
@@ -47,13 +48,13 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Có
 - **Tính năng nổi bật:**  
   Obfuscation, tối ưu hóa bytecode, giảm kích thước, hỗ trợ Android.
-- **Ưu điểm:**  
-  - Miễn phí, phổ biến, hỗ trợ rộng rãi  
-  - Tích hợp tốt với Android Studio và Gradle  
-  - Giảm kích thước file APK, tăng hiệu suất chạy  
-- **Nhược điểm:**  
-  - Bảo vệ chưa mạnh với các kỹ thuật reverse-engineering nâng cao  
-  - Cấu hình có thể phức tạp cho người mới  
+- **Ưu điểm:**
+    - Miễn phí, phổ biến, hỗ trợ rộng rãi
+    - Tích hợp tốt với Android Studio và Gradle
+    - Giảm kích thước file APK, tăng hiệu suất chạy
+- **Nhược điểm:**
+    - Bảo vệ chưa mạnh với các kỹ thuật reverse-engineering nâng cao
+    - Cấu hình có thể phức tạp cho người mới
 - **Phù hợp cho:**  
   Dự án mã nguồn mở, ứng dụng Android phổ biến.
 
@@ -65,12 +66,12 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Có
 - **Tính năng nổi bật:**  
   Phiên bản ProGuard tối ưu hóa đặc biệt cho Android.
-- **Ưu điểm:**  
-  - Cải tiến hiệu suất build Android so với ProGuard gốc  
-  - Tối ưu hóa thêm cho Android apps  
-- **Nhược điểm:**  
-  - Ít phổ biến hơn, ít cộng đồng hỗ trợ  
-  - Cập nhật phụ thuộc Facebook  
+- **Ưu điểm:**
+    - Cải tiến hiệu suất build Android so với ProGuard gốc
+    - Tối ưu hóa thêm cho Android apps
+- **Nhược điểm:**
+    - Ít phổ biến hơn, ít cộng đồng hỗ trợ
+    - Cập nhật phụ thuộc Facebook
 - **Phù hợp cho:**  
   Các ứng dụng Android cần tối ưu tốt hơn.
 
@@ -82,13 +83,13 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Không
 - **Tính năng nổi bật:**  
   Obfuscation nâng cao, chống tamper, chống debug.
-- **Ưu điểm:**  
-  - Bảo vệ mạnh mẽ chống reverse-engineering và tấn công tampering  
-  - Hỗ trợ nhiều kỹ thuật bảo vệ nâng cao  
-  - Giao diện dễ dùng, hỗ trợ tốt cho các app thương mại lớn  
-- **Nhược điểm:**  
-  - Chi phí cao, phù hợp với dự án lớn  
-  - Cần thời gian học và tích hợp  
+- **Ưu điểm:**
+    - Bảo vệ mạnh mẽ chống reverse-engineering và tấn công tampering
+    - Hỗ trợ nhiều kỹ thuật bảo vệ nâng cao
+    - Giao diện dễ dùng, hỗ trợ tốt cho các app thương mại lớn
+- **Nhược điểm:**
+    - Chi phí cao, phù hợp với dự án lớn
+    - Cần thời gian học và tích hợp
 - **Phù hợp cho:**  
   Ứng dụng thương mại quy mô lớn cần bảo mật cao.
 
@@ -100,13 +101,13 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Không
 - **Tính năng nổi bật:**  
   Obfuscation, mã hóa chuỗi, watermarking.
-- **Ưu điểm:**  
-  - Mã hóa chuỗi giúp bảo vệ thông tin nhạy cảm  
-  - Hỗ trợ watermarking cho bảo vệ bản quyền  
-  - Giao diện đơn giản, dễ sử dụng  
-- **Nhược điểm:**  
-  - Chi phí bản quyền  
-  - Ít hỗ trợ công khai và cộng đồng  
+- **Ưu điểm:**
+    - Mã hóa chuỗi giúp bảo vệ thông tin nhạy cảm
+    - Hỗ trợ watermarking cho bảo vệ bản quyền
+    - Giao diện đơn giản, dễ sử dụng
+- **Nhược điểm:**
+    - Chi phí bản quyền
+    - Ít hỗ trợ công khai và cộng đồng
 - **Phù hợp cho:**  
   Ứng dụng thương mại cần bảo vệ chuỗi và chứng minh bản quyền.
 
@@ -118,12 +119,12 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Không
 - **Tính năng nổi bật:**  
   Mã hóa chuỗi và obfuscation.
-- **Ưu điểm:**  
-  - Bảo vệ chuỗi hiệu quả, khó bị bẻ khóa  
-  - Tối ưu để bảo vệ thông tin nhạy cảm  
-- **Nhược điểm:**  
-  - Chi phí cao  
-  - Tập trung vào mã hóa chuỗi, không có nhiều tính năng khác  
+- **Ưu điểm:**
+    - Bảo vệ chuỗi hiệu quả, khó bị bẻ khóa
+    - Tối ưu để bảo vệ thông tin nhạy cảm
+- **Nhược điểm:**
+    - Chi phí cao
+    - Tập trung vào mã hóa chuỗi, không có nhiều tính năng khác
 - **Phù hợp cho:**  
   Ứng dụng cần bảo vệ chuỗi nhạy cảm cao.
 
@@ -135,12 +136,12 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Không
 - **Tính năng nổi bật:**  
   Obfuscation bytecode cấp thấp, làm phức tạp bytecode.
-- **Ưu điểm:**  
-  - Bảo vệ bytecode sâu, chống phân tích nâng cao  
-  - Tương thích với nhiều loại bytecode Java  
-- **Nhược điểm:**  
-  - Chi phí cao  
-  - Có thể làm tăng kích thước và giảm hiệu suất  
+- **Ưu điểm:**
+    - Bảo vệ bytecode sâu, chống phân tích nâng cao
+    - Tương thích với nhiều loại bytecode Java
+- **Nhược điểm:**
+    - Chi phí cao
+    - Có thể làm tăng kích thước và giảm hiệu suất
 - **Phù hợp cho:**  
   Dự án cần bảo vệ bytecode cốt lõi.
 
@@ -152,12 +153,12 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Không
 - **Tính năng nổi bật:**  
   Obfuscation nâng cao, flow control.
-- **Ưu điểm:**  
-  - Các kỹ thuật obfuscation mạnh, giúp làm phức tạp luồng xử lý  
-  - Hỗ trợ chống phân tích, decompiling tốt  
-- **Nhược điểm:**  
-  - Giá khá cao  
-  - Cần kiến thức kỹ thuật để sử dụng hiệu quả  
+- **Ưu điểm:**
+    - Các kỹ thuật obfuscation mạnh, giúp làm phức tạp luồng xử lý
+    - Hỗ trợ chống phân tích, decompiling tốt
+- **Nhược điểm:**
+    - Giá khá cao
+    - Cần kiến thức kỹ thuật để sử dụng hiệu quả
 - **Phù hợp cho:**  
   Ứng dụng thương mại lớn cần bảo mật cao.
 
@@ -169,12 +170,12 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Không
 - **Tính năng nổi bật:**  
   Mã hóa AES, bảo vệ thương mại.
-- **Ưu điểm:**  
-  - Mã hóa AES mạnh mẽ giúp bảo vệ mã và dữ liệu  
-  - Phù hợp phần mềm độc quyền cần bảo mật cao  
-- **Nhược điểm:**  
-  - Chi phí cao  
-  - Ít tài liệu công khai  
+- **Ưu điểm:**
+    - Mã hóa AES mạnh mẽ giúp bảo vệ mã và dữ liệu
+    - Phù hợp phần mềm độc quyền cần bảo mật cao
+- **Nhược điểm:**
+    - Chi phí cao
+    - Ít tài liệu công khai
 - **Phù hợp cho:**  
   Phần mềm độc quyền cần bảo vệ bản quyền và dữ liệu an toàn.
 
@@ -186,13 +187,50 @@ Dưới đây là bảng so sánh nhanh và phần mô tả chi tiết các côn
 - **Miễn phí:** Không
 - **Tính năng nổi bật:**  
   Cung cấp chứng chỉ EV/OV SSL giúp tăng độ tin cậy.
-- **Ưu điểm:**  
-  - Chứng chỉ EV/OV nâng cao độ tin cậy và bảo mật cho website  
-  - Hỗ trợ tốt cho việc phân phối ứng dụng và website công khai  
-- **Nhược điểm:**  
-  - Chi phí cao so với các chứng chỉ cơ bản  
-  - Cần quy trình xác thực nghiêm ngặt  
+- **Ưu điểm:**
+    - Chứng chỉ EV/OV nâng cao độ tin cậy và bảo mật cho website
+    - Hỗ trợ tốt cho việc phân phối ứng dụng và website công khai
+- **Nhược điểm:**
+    - Chi phí cao so với các chứng chỉ cơ bản
+    - Cần quy trình xác thực nghiêm ngặt
 - **Phù hợp cho:**  
-  Phân phối ứng dụng và website công khai, cần độ tin cậy cao.
+  Phân phối ứng dụng và website cần tăng trust cho người dùng.
+
+---
+
+### 11. Gradle Native VM
+- **Website:** [https://docs.graalvm.org/](https://docs.graalvm.org/) (GraalVM Native Image)
+- **Giấy phép:** Open Source (GPL + Commercial options)
+- **Miễn phí:** Có bản OSS
+- **Tính năng nổi bật:**
+    - Biên dịch ứng dụng Java thành file native thực thi độc lập
+    - Tăng tốc khởi động và giảm bộ nhớ runtime
+    - Tích hợp với Gradle để build native image dễ dàng
+- **Ưu điểm:**
+    - Ứng dụng chạy nhanh hơn, khởi động nhanh, nhẹ tài nguyên
+    - Bảo vệ mã nguồn Java (native image khó reverse hơn bytecode)
+    - Hỗ trợ đa nền tảng: Windows, Linux, macOS
+    - Tích hợp build script Gradle tiện lợi
+- **Nhược điểm:**
+    - Phức tạp trong cấu hình build native image, cần chú ý reflection, JNI
+    - Có thể gặp các giới hạn so với JVM chuẩn
+    - Kích thước file native có thể lớn
+- **Phù hợp cho:**  
+  Ứng dụng desktop hoặc server cần đóng gói native, bảo mật mã nguồn, khởi động nhanh.
+
+---
+
+## Tổng kết
+
+| Công cụ           | Loại                     | Ưu điểm nổi bật                            | Nhược điểm lớn nhất             | Phù hợp với                        |
+|-------------------|--------------------------|-------------------------------------------|--------------------------------|-----------------------------------|
+| yGuard            | Free, Open source        | Dễ dùng, nhẹ                             | Tính năng hạn chế              | Dự án nhỏ, mã nguồn mở            |
+| ProGuard          | Free, Open source        | Tối ưu hóa Android, phổ biến              | Bảo vệ chưa cao               | Android, mã nguồn mở              |
+| DashO             | Commercial               | Bảo vệ mạnh, chống tamper                 | Giá cao                      | Ứng dụng thương mại lớn           |
+| Allatori          | Commercial               | Mã hóa chuỗi, watermark                    | Chi phí cao                  | Bảo vệ bản quyền, chuỗi           |
+| KlassMaster       | Commercial               | Obfuscation nâng cao                       | Giá cao                      | Ứng dụng thương mại lớn           |
+| Protector4J       | Commercial               | Mã hóa AES                                | Ít tài liệu                  | Phần mềm độc quyền                |
+| SSL.com           | Commercial               | Chứng chỉ EV/OV tăng trust                | Chi phí cao                  | Phân phối ứng dụng công khai      |
+| Gradle Native VM  | Open source + commercial | Native image nhanh, bảo vệ mã nguồn       | Khó config, kích thước file lớn | Ứng dụng desktop/native           |
 
 ---
